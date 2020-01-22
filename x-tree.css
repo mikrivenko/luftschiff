@@ -1,0 +1,83 @@
+.xtree-container {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 300px;
+    height: auto;
+    left: -140px;
+    margin-left: 50%;
+    bottom: 0px;
+    background-color: #ffffff11;
+}
+.xtree-part {
+    position: relative;
+    display: block;
+    width: 0px;
+    height: 0px;
+    margin: -20px auto 0px;
+    border-radius: 50%;
+    border: 90px solid transparent;
+    border-top-width: 0px;
+    border-bottom-color: green;
+}
+.part-top {
+    border-width: 60px;
+    border-top-width: 0px;
+    margin-top: 0px;
+}
+.part-middle {
+    border-width: 120px;
+    border-top-width: 0px;
+    margin-top: -40px;
+}
+.part-bottom {
+    border-width: 150px;
+    border-top-width: 0px;
+    margin-top: -70px;
+}
+.xtree-trunk {
+    background-color: brown;
+    width: 20px;
+    height: 40px;
+    margin: -20px auto 20px;
+}
+.xtree-ground {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    background-color: snow;
+    bottom: -50px;
+    z-index: -1;
+}
+
+.ball {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background-color: crimson;
+    background-color: #18d67d;
+    background-color: #eeff00;
+    background-color: #8c00e9;
+    background-color: #ba00e9;
+    background-color: #7fff2a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#ball1 {
+    top: 10%;
+}
+#ball2 {
+    top: 20%;
+}
+#ball3 {
+    top: 30%;
+}
+#ball4 {
+    top: 40%;
+}
+#ball5 {
+    top: 50%;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>X-tree</title>
+    <link rel="stylesheet" type="text/css" href="./x-tree.css">"
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="xtree-container">
+        <div class="xtree-part part-top"></div>
+        <div class="xtree-part"></div>
+        <div class="xtree-part part-middle"></div>
+        <div class="xtree-part part-bottom"></div>
+        <div class="xtree-trunk"></div>
+        <div class="xtree-ground"></div>
+        <div id="ball1" class="ball"></div>
+        <div id="ball2" class="ball"></div>
+        <div id="ball3" class="ball"></div>
+        <div id="ball4" class="ball"></div>
+        <div id="ball5" class="ball"></div>
+    </div>
+    <script>
+        let colors = [
+            "#3085f5", 
+            "#18d67d", 
+            "#eeff00", 
+            "#8c00e9", 
+            "#e9ab00", 
+            "#e95500", 
+            "#7fff2a", 
+            "#ba00e9"];
+        let balls = document.querySelectorAll(".ball");
+        let updateBallColors = function() {
+            console.log("test");
+            for(let i=0; i < balls.length; i++) {
+                let ball = balls[i];
+                console.log("Ball");
+                console.log(ball);
+                let colorIndex = Math.floor(Math.random() * 1000) % colors.length;
+                console.log(`Color index: ${colorIndex}`);
+                let color = colors[colorIndex];
+                console.log(`color: ${color}`);
+                ball.style.backgroundColor = color;
+            }
+        };
+        console.log("Balls");
+        console.log(balls);
+        let startBallPlay = function() {
+            let timeout = 1000;
+            updateBallColors();
+            setTimeout(startBallPlay, timeout);  
+        };
+        startBallPlay();
+    </script>
+</body>
+</html>
